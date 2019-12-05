@@ -11,7 +11,8 @@ public class Bot extends ListenerAdapter
 {
     public static void main(String[] args) throws LoginException
     {
-        new JDABuilder("NjUxMTA4MDE2OTgwMDk5MDcz.XeZX7Q.DLuQ4VfqGeGC_bhrDI-79EUTejc")
+        new JDABuilder()
+        	.setToken("NjUxMTA4MDE2OTgwMDk5MDcz.Xelu-A.uMyD-QcEPzn8P2HTFWiWHYJvHlE")
             .addEventListeners(new Bot())
             .setActivity(Activity.watching("children"))
             .build();
