@@ -4,6 +4,7 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.MessageChannel;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -12,7 +13,7 @@ public class Bot extends ListenerAdapter
     public static void main(String[] args) throws LoginException
     {
         new JDABuilder()
-        	.setToken("NjUxMTA4MDE2OTgwMDk5MDcz.Xelu-A.uMyD-QcEPzn8P2HTFWiWHYJvHlE")
+        	.setToken("NjUxMTA4MDE2OTgwMDk5MDcz.Xelw9A.3FjT2ZrOVS7b3me5vEX4Ou1kaq4")
             .addEventListeners(new Bot())
             .setActivity(Activity.watching("children"))
             .build();
@@ -20,6 +21,7 @@ public class Bot extends ListenerAdapter
     
     public void onMessageReceived(MessageReceivedEvent event)
     {
+    	User user = event.getAuthor();
         Message msg = event.getMessage();
         MessageChannel channel = event.getChannel();
         int random;
@@ -55,13 +57,14 @@ public class Bot extends ListenerAdapter
         	channel.sendMessage("" + random).queue();
         	break;
         case "!palme":
-        	channel.sendMessage("palme skÃ¶t fÃ¶rst").queue();
+        	channel.sendMessage("palme sköt först").queue();
         	break;
         case "!crackhead":
         	for (int i = 0; i < 5; i++) {
         		channel.sendMessage("nightmare").queue();
         	}
         	break;
+        
         }
     }
 }
