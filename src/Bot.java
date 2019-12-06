@@ -57,7 +57,7 @@ public class Bot extends ListenerAdapter
         	channel.sendMessage("" + random).queue();
         	break;
         case "!palme":
-        	channel.sendMessage("palme sköt först").queue();
+        	channel.sendMessage("palme skï¿½t fï¿½rst").queue();
         	break;
         case "!crackhead":
         	for (int i = 0; i < 5; i++) {
