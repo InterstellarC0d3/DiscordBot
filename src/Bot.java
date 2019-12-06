@@ -12,10 +12,16 @@ public class Bot extends ListenerAdapter
 {
     public static void main(String[] args) throws LoginException
     {
+<<<<<<< Updated upstream
         new JDABuilder()
         	.setToken("NjUxMTA4MDE2OTgwMDk5MDcz.Xelw9A.3FjT2ZrOVS7b3me5vEX4Ou1kaq4")
             .addEventListeners(new Bot())
             .setActivity(Activity.watching("children"))
+=======
+        new JDABuilder("YD8ZUceXqNXP3bX5H7zgUJNR9s9MIVD_")
+            //.addEventListeners(new Bot())
+            //.setActivity(Activity.watching("children"))
+>>>>>>> Stashed changes
             .build();
     }
     
